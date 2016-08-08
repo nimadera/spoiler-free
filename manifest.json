@@ -11,6 +11,14 @@
 	},
 	"permissions": [
 		"storage"
+	],
+	"content_scripts": [
+	    {
+			"run_at": "document_start",
+			"matches": ["http://*/*", "https://*/*"],
+			"css": ["content.css"],
+			"js": ["content.js"]
+	    }
 	]/*,
 	"icons": {
 		"64": "images/spoilerfree64.png"

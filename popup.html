@@ -1,12 +1,7 @@
 <!doctype html>
-<!--
- This page is shown when the extension button is clicked, because the
- "browser_action" field in manifest.json contains the "default_popup" key with
- value "popup.html".
- -->
 <html>
   <head>
-    <title>Getting Started Extension's Popup</title>
+    <title>Spoiler Free</title>
     <style>
       body {
         font-family: "Segoe UI", "Lucida Grande", Tahoma, sans-serif;
@@ -22,14 +17,6 @@
       }
     </style>
 
-    <!--
-      - JavaScript and HTML must be in separate files: see our Content Security
-      - Policy documentation[1] for details and explanation.
-      -
-      - [1]: https://developer.chrome.com/extensions/contentSecurityPolicy
-     -->
-
-    <!-- <script src="https://use.fontawesome.com/580c477cc3.js"></script> -->
     <link rel="stylesheet" href="css/font-awesome.min.css">
     <script src="popup.js"></script>
   </head>
@@ -45,10 +32,7 @@
 
 		<!-- <input type="button" id="get" value="get stored line"> -->
 		<button id="viewTerms">View Keywords</button>
-		
-
-	    <!-- <div id="status"></div>
-	    <img id="image-result" hidden> -->
+		<button id="deleteTerms">Delete All Keywords</button>
     </div>
   </body>
 </html>

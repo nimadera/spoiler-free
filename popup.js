@@ -2,7 +2,6 @@ window.onload = function () {
   document.getElementById('save').onclick = function() {
     var value = document.getElementById('term').value;
     
-    // array: storedTerms
     chrome.storage.sync.get({storedTerms: []}, function(data){
       console.log(data);
 
@@ -21,15 +20,18 @@ window.onload = function () {
         // clear the input field
 
         chrome.storage.sync.get('storedTerms', function (data) {
-            console.log(data.storedTerms);
+            document.getElementById('term').value = '';
         });
       });
     })
   }
   
   document.getElementById('viewTerms').onclick = function() {
-    chrome.storage.sync.get('storedTerms', function(data){
-      alert(data.storedTerms);
+    chrome.tabs.create({'url':'manage.html'});
+  }
+
+  document.getElementById('deleteTerms').onclick = function() {
+    chrome.storage.sync.clear(function(){
     });
   }
 
